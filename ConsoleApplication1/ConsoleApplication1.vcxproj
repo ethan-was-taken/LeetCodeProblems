@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{B6998F57-3EA7-4CD9-A075-2A1EADE6C033}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ConsoleApplication1</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <ProjectName>LeetCodeProblems</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="addTwoNums.h" />
+    <ClInclude Include="balancedBinaryTree.h" />
+    <ClInclude Include="binaryAdd.h" />
+    <ClInclude Include="pathSum.h" />
+    <ClInclude Include="temp.h" />
+    <ClInclude Include="treeFromPreAndInTraversal.h" />
+    <ClInclude Include="treePaths.h" />
+    <ClInclude Include="binaryTreeRightSideView.h" />
+    <ClInclude Include="bstIterator.h" />
+    <ClInclude Include="buyAndSellStock_309.h" />
+    <ClInclude Include="buySellStock.h" />
+    <ClInclude Include="climbingStairs.h" />
+    <ClInclude Include="combinations.h" />
+    <ClInclude Include="comboSum.h" />
+    <ClInclude Include="comboSumII.h" />
+    <ClInclude Include="comboSumIV.h" />
+    <ClInclude Include="commonAncestor.h" />
+    <ClInclude Include="containsDuplicate2_219.h" />
+    <ClInclude Include="containsDuplicate_217.h" />
+    <ClInclude Include="convListToBST.h" />
+    <ClInclude Include="countingBits.h" />
+    <ClInclude Include="countPrimes_204.h" />
+    <ClInclude Include="courseSchedule.h" />
+    <ClInclude Include="deleteLinkedListNode.h" />
+    <ClInclude Include="disappearedNums.h" />
+    <ClInclude Include="editDistance.h" />
+    <ClInclude Include="findAnagrams_438.h" />
+    <ClInclude Include="findBSTMode.h" />
+    <ClInclude Include="findDuplicateNum.h" />
+    <ClInclude Include="findKthLarge.h" />
+    <ClInclude Include="findLargestValInTreeRow.h" />
+    <ClInclude Include="findMin_153.h" />
+    <ClInclude Include="firstUniqueChar.h" />
+    <ClInclude Include="fractionToDec.h" />
+    <ClInclude Include="gameLife.h" />
+    <ClInclude Include="generateParens.h" />
+    <ClInclude Include="groupAnagram.h" />
+    <ClInclude Include="hammingDist.h" />
+    <ClInclude Include="happyNumber.h" />
+    <ClInclude Include="insertPos.h" />
+    <ClInclude Include="islandPerim.h" />
+    <ClInclude Include="isomorphicStrings.h" />
+    <ClInclude Include="lhs_594.h" />
+    <ClInclude Include="listWithRandomPointer.h" />
+    <ClInclude Include="lowestCommonAncestorBST.h" />
+    <ClInclude Include="maxAvgSubarray.h" />
+    <ClInclude Include="maxProductSubarray.h" />
+    <ClInclude Include="maxProductWordLengths.h" />
+    <ClInclude Include="maxXOR.h" />
+    <ClInclude Include="mergeBinaryTrees.h" />
+    <ClInclude Include="mergeSortedArrays.h" />
+    <ClInclude Include="minDepthBinaryTree.h" />
+    <ClInclude Include="missingNum.h" />
+    <ClInclude Include="moveZeroes_283.h" />
+    <ClInclude Include="multiplyStrings.h" />
+    <ClInclude Include="nextPerm.h" />
+    <ClInclude Include="numberIslands.h" />
+    <ClInclude Include="numOneBits.h" />
+    <ClInclude Include="houseRobber.h" />
+    <ClInclude Include="iterativeInorderTraversal.h" />
+    <ClInclude Include="jumpGame.h" />
+    <ClInclude Include="kSmallestElementBST.h" />
+    <ClInclude Include="kthSmallest_378.h" />
+    <ClInclude Include="letterCombos.h" />
+    <ClInclude Include="levelOrderTraverse.h" />
+    <ClInclude Include="linkedListCycle.h" />
+    <ClInclude Include="linkedListCycleII.h" />
+    <ClInclude Include="linkedListsIntersection.h" />
+    <ClInclude Include="longestConsecutiveSequence.h" />
+    <ClInclude Include="longestIncPath.h" />
+    <ClInclude Include="longestPalindrom.h" />
+    <ClInclude Include="longestPrefix.h" />
+    <ClInclude Include="longestSubstring.h" />
+    <ClInclude Include="longIncSubsequence.h" />
+    <ClInclude Include="majorElement.h" />
+    <ClInclude Include="maxDistanceArrays.h" />
+    <ClInclude Include="maximumDepth.h" />
+    <ClInclude Include="maximumSubarray.h" />
+    <ClInclude Include="maxPts.h" />
+    <ClInclude Include="maxSquare.h" />
+    <ClInclude Include="mergeIntervals.h" />
+    <ClInclude Include="mergeTwoListss.h" />
+    <ClInclude Include="merge_k_Lists.h" />
+    <ClInclude Include="miniPathSum.h" />
+    <ClInclude Include="minSubArraySum.h" />
+    <ClInclude Include="minWindowSubstr.h" />
+    <ClInclude Include="mostFrequent.h" />
+    <ClInclude Include="mostWater_11.h" />
+    <ClInclude Include="myPower.h" />
+    <ClInclude Include="oddEvenLinkedList.h" />
+    <ClInclude Include="palindromeLinkedList.h" />
+    <ClInclude Include="pascalsTriangle.h" />
+    <ClInclude Include="pascalsTriangleII.h" />
+    <ClInclude Include="permInString.h" />
+    <ClInclude Include="perfectSquares.h" />
+    <ClInclude Include="Permutations.h" />
+    <ClInclude Include="plusOne_66.h" />
+    <ClInclude Include="populate_116.h" />
+    <ClInclude Include="powerOfThree.h" />
+    <ClInclude Include="powerOfTwo.h" />
+    <ClInclude Include="printer.h" />
+    <ClInclude Include="prodOfArray.h" />
+    <ClInclude Include="randomizedSet.h" />
+    <ClInclude Include="removeDuplicates_83.h" />
+    <ClInclude Include="removeDupsSortedListII.h" />
+    <ClInclude Include="removeListElements.h" />
+    <ClInclude Include="removeNthNode.h" />
+    <ClInclude Include="repeatedDNASequences.h" />
+    <ClInclude Include="reshapeMatrix.h" />
+    <ClInclude Include="revBits.h" />
+    <ClInclude Include="reverseInt.h" />
+    <ClInclude Include="reverseLinkedList.h" />
+    <ClInclude Include="reverseLinkedList2.h" />
+    <ClInclude Include="reverseStringVowels.h" />
+    <ClInclude Include="romanToInteger.h" />
+    <ClInclude Include="rotateArray.h" />
+    <ClInclude Include="rotateImage.h" />
+    <ClInclude Include="sameTree.h" />
+    <ClInclude Include="search2DMatrix.h" />
+    <ClInclude Include="searchForRange.h" />
+    <ClInclude Include="searchRotatedArray.h" />
+    <ClInclude Include="serializeDeserializeBinaryTree.h" />
+    <ClInclude Include="setMatrixZeroes.h" />
+    <ClInclude Include="shuffleArray.h" />
+    <ClInclude Include="slidingWindowMax.h" />
+    <ClInclude Include="sortByFrequency.h" />
+    <ClInclude Include="sortColor.h" />
+    <ClInclude Include="spiralMatrix.h" />
+    <ClInclude Include="sqrtX.h" />
+    <ClInclude Include="stringStr.h" />
+    <ClInclude Include="stringToInt.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="subarraySum_560.h" />
+    <ClInclude Include="subsets_78.h" />
+    <ClInclude Include="subtreeOfAnotherTree.h" />
+    <ClInclude Include="sumClosest.h" />
+    <ClInclude Include="summaryRanges_228.h" />
+    <ClInclude Include="symmetricTree.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="threeSum_.h" />
+    <ClInclude Include="trappingWater.h" />
+    <ClInclude Include="treeDiameter_543.h" />
+    <ClInclude Include="Trie.h" />
+    <ClInclude Include="twoSum.h" />
+    <ClInclude Include="twoSumII.h" />
+    <ClInclude Include="uniquePaths_62.h" />
+    <ClInclude Include="validAnagram.h" />
+    <ClInclude Include="validPalindrome.h" />
+    <ClInclude Include="validParentheses.h" />
+    <ClInclude Include="validSudoku.h" />
+    <ClInclude Include="wiggleSortII.h" />
+    <ClInclude Include="wordBreak_.h" />
+    <ClInclude Include="wordLadder.h" />
+    <ClInclude Include="wordPattern_.h" />
+    <ClInclude Include="wordSearch.h" />
+    <ClInclude Include="zigzagTreeTraversal.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
