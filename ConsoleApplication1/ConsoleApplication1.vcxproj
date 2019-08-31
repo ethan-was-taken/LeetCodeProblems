@@ -140,11 +140,90 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="addTwoNums.h" />
+    <ClInclude Include="ArithmeticSlices.h" />
+    <ClInclude Include="ArrayNesting.h" />
+    <ClInclude Include="asteroidCollisions.h" />
+    <ClInclude Include="averageLevelsBinaryTree.h" />
     <ClInclude Include="balancedBinaryTree.h" />
+    <ClInclude Include="BinarySubarraysWithSum.h" />
+    <ClInclude Include="binaryTreeWidth.h" />
+    <ClInclude Include="BoatsToSavePeople.h" />
+    <ClInclude Include="BST_ToGreaterTree.h" />
+    <ClInclude Include="canPlaceFlowers_605.h" />
+    <ClInclude Include="ComboSumIII.h" />
+    <ClInclude Include="contigiousArray.h" />
+    <ClInclude Include="ContiguousArrayRevisited.h" />
+    <ClInclude Include="CouplesHoldingHands.h" />
+    <ClInclude Include="courseSchedule.h" />
+    <ClInclude Include="CourseScheduleII.h" />
+    <ClInclude Include="DailyTemps.h" />
+    <ClInclude Include="DeleteColumns.h" />
+    <ClInclude Include="DivisorGame.h" />
+    <ClInclude Include="EqualityEquations.h" />
+    <ClInclude Include="excelSheetColumnTitle.h" />
     <ClInclude Include="binaryAdd.h" />
+    <ClInclude Include="coinChanges.h" />
+    <ClInclude Include="findBadVersion.h" />
+    <ClInclude Include="findClosestElements.h" />
+    <ClInclude Include="FindTheDifference.h" />
+    <ClInclude Include="FlattenBinaryTree.h" />
+    <ClInclude Include="four_Sum.h" />
+    <ClInclude Include="FriendCircles.h" />
+    <ClInclude Include="GasStation.h" />
+    <ClInclude Include="HandOfStraights.h" />
+    <ClInclude Include="invertBinaryTree.h" />
+    <ClInclude Include="judgeRouteCircle.h" />
+    <ClInclude Include="largestNum_179.h" />
+    <ClInclude Include="lastWordLength.h" />
+    <ClInclude Include="leastIndexSum_599.h" />
+    <ClInclude Include="longestIncSequence.h" />
+    <ClInclude Include="LongestLengthFibSubSequence.h" />
+    <ClInclude Include="MatchSticks.h" />
+    <ClInclude Include="maxBST_654.h" />
+    <ClInclude Include="MaxLengthPairChain.h" />
+    <ClInclude Include="maxSubarray.h" />
+    <ClInclude Include="maxSwap.h" />
+    <ClInclude Include="MaxWidthRamp.h" />
+    <ClInclude Include="MedianTwoSortedArrays.h" />
+    <ClInclude Include="MinASCIIDeleteSum.h" />
+    <ClInclude Include="minCostStairClimb.h" />
+    <ClInclude Include="MinFallingPath.h" />
+    <ClInclude Include="MountainArray.h" />
+    <ClInclude Include="NetworkDelayTime.h" />
+    <ClInclude Include="nextGreaterElementIII.h" />
+    <ClInclude Include="NonDecreasingArray.h" />
+    <ClInclude Include="NumArray.h" />
+    <ClInclude Include="NumConsecutiveDiff.h" />
+    <ClInclude Include="NumMatchingSubsequences.h" />
+    <ClInclude Include="palindromeNum.h" />
+    <ClInclude Include="PalindromeNumber.h" />
+    <ClInclude Include="PartitionList.h" />
     <ClInclude Include="pathSum.h" />
+    <ClInclude Include="numMatrix.h" />
+    <ClInclude Include="MyQueue.h" />
+    <ClInclude Include="pathSumII.h" />
+    <ClInclude Include="permutationsII.h" />
+    <ClInclude Include="PreorderRecovery.h" />
+    <ClInclude Include="QueueStack.h" />
+    <ClInclude Include="RegionsCut.h" />
+    <ClInclude Include="RemoveDupsFromArrayII.h" />
+    <ClInclude Include="ReorganizeString.h" />
+    <ClInclude Include="reverseCharString.h" />
+    <ClInclude Include="ReverseGroup.h" />
+    <ClInclude Include="reverseWords_III.h" />
+    <ClInclude Include="RottenOrangesRedux.h" />
+    <ClInclude Include="searchInsertPosition.h" />
+    <ClInclude Include="setMismatch.h" />
+    <ClInclude Include="ShortEncoding.h" />
+    <ClInclude Include="singleNum.h" />
+    <ClInclude Include="SmallestRange.h" />
+    <ClInclude Include="SmallestStringFromLeaf.h" />
+    <ClInclude Include="sortLinkedList.h" />
+    <ClInclude Include="stopper.h" />
+    <ClInclude Include="swapLinkedListPairs.h" />
     <ClInclude Include="temp.h" />
     <ClInclude Include="treeFromPreAndInTraversal.h" />
+    <ClInclude Include="treeNode.h" />
     <ClInclude Include="treePaths.h" />
     <ClInclude Include="binaryTreeRightSideView.h" />
     <ClInclude Include="bstIterator.h" />
@@ -161,7 +240,6 @@
     <ClInclude Include="convListToBST.h" />
     <ClInclude Include="countingBits.h" />
     <ClInclude Include="countPrimes_204.h" />
-    <ClInclude Include="courseSchedule.h" />
     <ClInclude Include="deleteLinkedListNode.h" />
     <ClInclude Include="disappearedNums.h" />
     <ClInclude Include="editDistance.h" />
@@ -216,7 +294,6 @@
     <ClInclude Include="majorElement.h" />
     <ClInclude Include="maxDistanceArrays.h" />
     <ClInclude Include="maximumDepth.h" />
-    <ClInclude Include="maximumSubarray.h" />
     <ClInclude Include="maxPts.h" />
     <ClInclude Include="maxSquare.h" />
     <ClInclude Include="mergeIntervals.h" />
@@ -282,18 +359,28 @@
     <ClInclude Include="trappingWater.h" />
     <ClInclude Include="treeDiameter_543.h" />
     <ClInclude Include="Trie.h" />
+    <ClInclude Include="TwoKeysKeboard.h" />
     <ClInclude Include="twoSum.h" />
     <ClInclude Include="twoSumII.h" />
+    <ClInclude Include="twoSumIV.h" />
+    <ClInclude Include="uniquePathsII.h" />
     <ClInclude Include="uniquePaths_62.h" />
     <ClInclude Include="validAnagram.h" />
+    <ClInclude Include="validateBST.h" />
+    <ClInclude Include="ValidateStackSequence.h" />
     <ClInclude Include="validPalindrome.h" />
+    <ClInclude Include="validPalindromeII.h" />
     <ClInclude Include="validParentheses.h" />
     <ClInclude Include="validSudoku.h" />
+    <ClInclude Include="wiggleMaxSubsequence.h" />
     <ClInclude Include="wiggleSortII.h" />
-    <ClInclude Include="wordBreak_.h" />
+    <ClInclude Include="WordBreak.h" />
+    <ClInclude Include="WordGap.h" />
     <ClInclude Include="wordLadder.h" />
     <ClInclude Include="wordPattern_.h" />
     <ClInclude Include="wordSearch.h" />
+    <ClInclude Include="XofAKind.h" />
+    <ClInclude Include="ZeroOneMatrix.h" />
     <ClInclude Include="zigzagTreeTraversal.h" />
   </ItemGroup>
   <ItemGroup>
@@ -305,7 +392,17 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets" Condition="Exists('..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets'))" />
+  </Target>
 </Project>

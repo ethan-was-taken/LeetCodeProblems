@@ -6,60 +6,103 @@
 #include <ctime>
 #include <vector>
 #include <fstream>
+#include <algorithm>
+#include <random>
 
-#include "temp.h"
-#include "printer.h"
+#include "MinASCIIDeleteSum.h"
+#include "NonDecreasingArray.h"
+//#include "PreorderRecovery.h"
+#include "ComboSumIII.h"
+//#include "printer.h"
+
 
 using namespace std;
 
-int main() {	
+int randomfunc(int j) {
+	return rand() % j;
+};
 
-	treeNode* root = new treeNode();
-	treeNode* ptr = root;
-	ptr->value = 6;
+void randomPairs(vector<vector<int>> &in) {
 
-	ptr->left = new treeNode();
-	ptr->right = new treeNode();
-	ptr->left->value = 4;
-	ptr->right->value = 8;
+	for (int i = 0; i < 7; i++) {
 
-	ptr = ptr->left;
-	ptr->left = new treeNode();
-	ptr->right = new treeNode();
-	ptr->left->value = 3;
-	ptr->right->value = 5;
+		int one = randomfunc(100);
+		int two = randomfunc(100);
 
-	ptr = ptr->left;
-	ptr->left = new treeNode();
-	ptr->left->value = 2;
-	
+		vector<int> temp;
+		temp.push_back(one / 10);
+		temp.push_back(two / 10);
 
-	ptr = root->right;
-	ptr->left = new treeNode();
-	ptr->right = new treeNode();
-	ptr->left->value = 7;
-	ptr->right->value = 9;
+		sort(temp.begin(), temp.end());
 
-	printer::postorder(root);
+		in.push_back(temp);
+	}
+
+};
+
+string getRandString(int sizeUpperBound) {
+
+	string res = "";
+	//int ub = randomfunc(sizeUpperBound);
+	int ub = sizeUpperBound;
+
+	for (int i = 0; i < ub; i++) {
+		char randChar = randomfunc(26) + 'a';
+		res += randChar;
+	}
+
+	return res;
+
+};
+/* 
+	1
+-	2
+--	3
+--	4
+-	5
+--	6
+--	7
+*/
+int main() {
 
 	//------------------------------------------------------------------------
 	cout << "starting" << endl;
 	clock_t Start = clock();
 
-	auto ans = temp::get_strings_from_nums("234");
-	
-	for (auto curr : ans) {
-		cout << curr << ", ";
-	}
-	
-	//cout << "ans:\t\t" << ans->value << endl;
-	
-	
+	/*PreorderRecovery temp;
+	temp.recoverFromPreorder("1-2--3--4-5--6--7");*/
+
+	ComboSumIII temp;
+	//auto res = temp.combinationSum3(3, 7);
+	auto res = temp.combinationSum3(2, 18);
+
 	cout << "took: " << (clock() - Start) << " ms" << endl << endl;
-	//------------------------------------------------------------------------	
+
+	//printer::print(ans);
+
+	//------------------------------------------------------------------------
 
 	return 0;
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -91,7 +134,7 @@ vector<vector<int>> getInput() {
 			vector<int> temp;
 
 			for (int j = i; j < currLine.size(); j++) {
-				if (currLine[j] == ']') {
+				if (currLine{j} == '}') {
 					string str = currLine.substr(i, j - i);
 					int num = atoi(str.c_str());
 					i = j + 3;
@@ -109,6 +152,45 @@ vector<vector<int>> getInput() {
 	// end of get input
 	//--------------------------------------
 	return send;
-};*/
 
+};
 
+vector<int> getRandomArray(int size) {
+
+	srand(time(NULL));
+
+	vector<int> toReturn;
+	for (int i = 0; i < size; i++)
+		toReturn.push_back(rand() % 100);
+
+	return toReturn;
+};
+
+vector<int> getRandomBinaryArray(int size) {
+
+	srand(time(NULL));
+
+	vector<int> toReturn;
+	for (int i = 0; i < size; i++)
+		toReturn.push_back(rand() % 2);
+
+	return toReturn;
+
+};
+
+void rotateArray(vector<int> &nums, int startPos) {
+
+	vector<int> temp;
+	int j = 0;
+	for (int i = startPos; j < nums.size(); j++) {
+
+		temp.push_back(nums{i});
+		i++;
+		i = (i >= nums.size()) ? 0 : i;
+
+	}
+
+	nums = temp;
+
+};
+*/

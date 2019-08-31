@@ -5,58 +5,70 @@
 using namespace std;
 
 class moveZeroes_283 {
-public:
-	void moveZeroes(vector<int>& nums) {
+	public:
+		moveZeroes_283() {
+			zeroPtr = 0;
+			nonZeroPtr = 0;
+		};
 
-		int lptr = setToIndexWithZero(nums);
-		int rptr = lptr;
+		void moveZeroes(vector<int> &nums) {
+			moveZeroesToBack(nums);
+		};
 
-		for (; lptr < nums.size(); lptr++) {
+	private:
+		vector<int> nums;
+		int zeroPtr;
+		int nonZeroPtr;
 
-			setToIndexWithNonZero(nums, rptr);
+		void moveZeroesToBack(vector<int> &nums) {
 
-			if (rptr >= nums.size())
-				break;
+			this->nums = nums;
+			setPointers();
 
-			nums[lptr] = nums[rptr];
-			nums[rptr] = 0;
-			rptr++;
+			reorderNums();
 
-		}
+			nums = this->nums;
 
-	};
+		};
 
-private:
-	inline int setToIndexWithZero(vector<int> nums) {
+		inline void setPointers() {
+			setZeroPtrToNextZero();
+			setNonZeroPtrToNextNonZero();
+		};
 
-		int lptr = 0;
-		while (lptr < nums.size() && nums[lptr] != 0)
-			lptr++;
+		inline void setZeroPtrToNextZero() {
+			while (zeroPtr < nums.size() - 1 && nums[zeroPtr] != 0)
+				zeroPtr++;
+		};
 
-		return lptr;
+		inline void setNonZeroPtrToNextNonZero() {
+			// We need to make sure that nonZeroPtr is always after the zeroPtr
+			while (nonZeroPtr < nums.size() - 1 && nums[nonZeroPtr] == 0 || nonZeroPtr < zeroPtr)
+				nonZeroPtr++;
+		};
 
-	};
+		inline void reorderNums() {
 
-	inline void setToIndexWithNonZero(vector<int> nums, int &start) {
+			while (arePointersInBounds()) {
+				swap(zeroPtr, nonZeroPtr);
+				setPointers();
+			}
 
-		while (start < nums.size() && nums[start] == 0)
-			start++;
+			if (nums[nonZeroPtr] != 0)
+				swap(zeroPtr, nonZeroPtr);
 
-	};
+		};
+
+		inline bool arePointersInBounds() {
+			bool isZeroPtrInBounds = zeroPtr != nums.size() - 1;
+			bool isNonZeroPtrInBounds = nonZeroPtr != nums.size() - 1;
+			return isZeroPtrInBounds && isNonZeroPtrInBounds;
+		};
+
+		inline void swap(int zeroPtr, int nonZeroPtr) {
+			int temp = nums[zeroPtr];
+			nums[zeroPtr] = nums[nonZeroPtr];
+			nums[nonZeroPtr] = temp;
+		};
 
 };
-/*
-1.	increase lptr (and rptr) till we reach a 0
-2.	increase rptr till it gets to a non-zero num OR end of vector
-3.	if rptr at end of vector && rptr is pointing at a zero
-		break
-	else if rptr at  end 
-		swap
-		break
-	else 
-		swap
-4.	Increase lptr
-5.	loop to 2
-6.	fill in rest of vector with 0's
-		
-*/

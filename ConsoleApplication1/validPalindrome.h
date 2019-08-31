@@ -4,7 +4,7 @@
 
 using namespace std;
 
-class validPalindrome {
+class ValidPalindrome {
 public:
 	bool isPalindrome(string s) {
 

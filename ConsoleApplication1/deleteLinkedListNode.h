@@ -9,12 +9,13 @@ struct ListNode {
 	ListNode *next;
 	ListNode(int x) : val(x), next(NULL) {}
 };
+
 class deleteLinkedListNode {
 public:
 	void deleteNode(ListNode* node) {
 
 		ListNode* ptr = node;
-		while (true) {
+		while (ptr->next->next == NULL) {
 			
 			ptr->val = ptr->next->val;
 			

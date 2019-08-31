@@ -3,6 +3,8 @@
 #include <string>
 #include <vector>
 
+#include "printer.h"
+
 using namespace std;
 
 struct ListNode {
@@ -15,47 +17,54 @@ class removeNthNode {
 public:
 	ListNode* removeNthFromEnd(ListNode* head, int n) {
 
-		/*ListNode* slowPtr = head;
-		ListNode* fastPtr = head;
-		
-		int count = 0;
-		while (!fastPtr->next) {
+		// make sure its valid
+		if (n == 0 || !head)
+			return head;
 
-			slowPtr = slowPtr->next;
-			if(!fastPtr->next->next)
-				fastPtr = fastPtr->next->next;
+		setPointers(head);
+		setupPointer(n);
 
-		}*/
+		if (!ptr)
+			return removeHead(head);
 
-		ListNode* ptr = head;
-
-		vector<ListNode*> nodes;
-		while (ptr != NULL) {
-			nodes.push_back(ptr);
-			ptr = ptr->next;
-		}
-
-		cout << "nodes:\t";
-		for (auto i : nodes) {
-			cout << i->val << "\t";
-		}
-		cout << endl;
-
-		int indexToDelete = nodes.size() - n;
-
-		cout << "index\t" << indexToDelete << endl;
-
-		if (indexToDelete + 1 >= nodes.size())
-			nodes[indexToDelete - 1]->next = NULL;
-		else if()
-			nodes[indexToDelete - 1]->next = nodes[indexToDelete + 1];
-
-
-		// Dont want a memory leak!
-		delete nodes[indexToDelete];
-
-
+		setPointersToCorrectPos();
+		removeTheNthNode();
 		return head;
 
 	};
+
+private:
+	ListNode* ptr;
+	ListNode* trailingPtr;
+
+	void setPointers(ListNode* head) {
+		ptr = head;
+		trailingPtr = head;
+	};
+
+	void setupPointer(int n) {
+		for (int i = 0; i < n + 1 && ptr; i++)
+			ptr = ptr->next;
+	};
+
+	ListNode* removeHead(ListNode* head) {
+		ListNode* temp = head->next;
+		delete(head);
+		head = temp;
+		return head;
+	};
+
+	void setPointersToCorrectPos() {
+		while (ptr->next) {
+			ptr = ptr->next;
+			trailingPtr = trailingPtr->next;
+		}
+	};
+
+	void removeTheNthNode() {
+		ListNode* temp = trailingPtr->next->next;
+		delete(trailingPtr->next);
+		trailingPtr->next = temp;
+	};
+
 };

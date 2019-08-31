@@ -2,27 +2,28 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <unordered_set>
+#include <unordered_map>
 
 using namespace std;
-//HINT 1
-/*
-sort each word in strs
-*/
-
-//HINT 2
-/*
-store it in a unordered_map  with the sorted string as the key
-*/
 
 class groupAnagram {
-	public:
-		vector<vector<string>> groupAnagrams(vector<string>& strs) {
+public:
+	static vector<vector<string>> groupAnagrams(vector<string>& strs) {
 
+		unordered_map<string, vector<string>> anagramHolder;
+		for (string curr : strs) {
+			string toAdd = curr;
+			sort(curr.begin(), curr.end());
+			anagramHolder[curr].push_back(toAdd);
+		}
 			
-			return vector<vector<string>>();
-		};
-	private:
 
+		vector<vector<string>> result;
+		for (auto curr : anagramHolder)
+			result.push_back(curr.second);
+						
+		return result;
+
+	};
 
 };
